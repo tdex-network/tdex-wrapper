@@ -2,7 +2,7 @@ FROM --platform=linux/arm64/v8 ghcr.io/tdex-network/dashboard:v0.1.36@sha256:57b
 
 FROM --platform=linux/arm64/v8 ghcr.io/tdex-network/tdexd:v0.8.17@sha256:10c648982648c71c7c31456c1fc64a3f5c03763a1879cc926e321cd6081c2415
 
-ENV USE_PROXY "true"
+ENV USE_PROXY "false"
 ENV IS_PACKAGED "true"
 ENV TDEX_DAEMON_URL "tdex.embassy:9090"
 
