@@ -2,6 +2,9 @@
 
 set -e
 
+export TDEX_DAEMON_URL=$(yq e '.tor-address' /root/start9/config.yaml):9090
+export TDEX_CONNECT_ADDR=$(yq e '.tor-address' /root/start9/config.yaml):9090
+
 echo 'Starting TDEX Daemon...'
 tdexd &
 
