@@ -1,6 +1,6 @@
-# Wrapper for LnMe
+# Wrapper for TDEX
 
-LnMe is your friendly LN payment page. You can run LnMe on EmbassyOS by installing an .s9pk file, or you can build your own .s9pk file by following the instuctions below.
+TDEX is a Decentralised Vision to Leverage Atomic Swaps for Trustless Finance. You can run TDEX on EmbassyOS by installing an .s9pk file, or you can build your own .s9pk file by following the instuctions below.
 
 ## Dependencies
 
@@ -54,20 +54,20 @@ cd embassy-os/backend/
 ./install-sdk.sh
 embassy-sdk init
 ```
-Now you are ready to build your **LnMe** service
+Now you are ready to build your **TDEX** service
 
 ## Cloning
 
 Clone the project locally. 
 
 ```
-git clone https://github.com/Start9Labs/lnme-wrapper.git
-cd LnMe-wrapper
+git clone https://github.com/Start9Labs/TDEX-wrapper.git
+cd TDEX-wrapper
 ```
 
 ## Building
 
-To build the **LnMe** service, run the following command:
+To build the **TDEX** service, run the following command:
 
 ```
 make
@@ -81,11 +81,11 @@ Run the following commands to determine successful install:
 ```
 embassy-cli auth login
 #Enter your embassy password
-embassy-cli --host https://embassy-q1w2e3r4.local package install lnme.s9pk
+embassy-cli --host https://embassy-q1w2e3r4.local package install tdexß.s9pk
 ```
-**Tip:** You can also install the LnMe.s9pk using **Sideload Service** under the **Embassy > SETTINGS** section.
+**Tip:** You can also install the TDEX.s9pk using **Sideload Service** under the **Embassy > SETTINGS** section.
 ## Verify Install
 
-Go to your Embassy Services page, select **LnMe**, configure and start the service.
+Go to your Embassy Services page, select **TDEX**, configure and start the service.
 
 **Done!** 

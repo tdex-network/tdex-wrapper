@@ -1,17 +1,17 @@
-id: lnme 
-title: "LnMe"
-version: 1.5.1
+id: tdex 
+title: "TDEX"
+version: 0.8.17
 release-notes: "Initial Release for EmbassyOS"
 license: mit
-wrapper-repo: "https://github.com/islandbitcoin/lnme-wrapper"
-upstream-repo: "https://github.com/bumi/lnme"
-support-site: "https://github.com/bumi/lnme/issues"
-marketing-site: "https://michaelbumann.com"
+wrapper-repo: "https://github.com/islandbitcoin/tdex-wrapper"
+upstream-repo: "https://github.com/tdex-network/tdex-daemon"
+support-site: "https://github.com/tdex-network/tdex-daemon/issues"
+marketing-site: "https://tdex.network"
 build: ["make"]
 description:
-  short: Your friendly Bitcoin Lightning ⚡ payment page ⚡
+  short: A Decentralised Vision to Leverage Atomic Swaps for Trustless Finance
   long: |
-    LnMe is a personal Bitcoin Lightning payment page or widget and self-hosted Lightning Address server.
+    T(True)DEX is the first-of-its-kind, atomic-swap based, privacy-prioritised Decentralised Exchange (DEX) project built on the Liquid Network. 
 assets:
   license: LICENSE
   icon: icon.svg
@@ -24,11 +24,10 @@ main:
   args: []
   mounts:
     main: /root
-    lnd: /mnt/lnd
 health-checks:
   web-ui:
     name: Web UI
-    success-message: lnme is ready to visit in a web browser
+    success-message: TDEX is ready to visit in a web browser
     type: script
 config: 
   get:
@@ -40,33 +39,26 @@ properties:
 volumes:
   main:
     type: data
-  lnd:
-    type: pointer
-    package-id: lnd
-    volume-id: main
-    path: "/public"
-    readonly: true
 interfaces:
   main:
-    name: LnMe Web Interface
+    name: TDEX Web Interface
     description: Specifies the interface to listen on for HTTP connections.
     tor-config:
       port-mapping:
-        80: "1323"
+        80: "8080"
+        9090: "9090"
     lan-config:
       443:
         ssl: true
-        internal: 1323
+        internal: 8080
+      9090:
+        ssl: true
+        internal: 9090
     ui: true
     protocols:
       - tcp
       - http
-dependencies: 
-  lnd:
-    version: ">=0.11.0 <0.16.0"
-    requirement:
-      type: required
-    config: ~
+dependencies: {}
 backup:
   create:
     type: docker
