@@ -1,6 +1,6 @@
-FROM --platform=linux/arm64/v8 ghcr.io/tdex-network/dashboard:v0.1.43@sha256:55f482c26bf2f5907dde9ce8309fa8c183cedac5f4028924099ab85e85f22a53 as builder
+FROM --platform=linux/arm64/v8 ghcr.io/tdex-network/dashboard:v0.1.50@sha256:804a2b35799147cf9aa6bad7374568be516b2b4ffbee0831a7a47ab15d5dfb4d as builder
 
-FROM --platform=linux/arm64/v8 ghcr.io/tdex-network/tdexd:v0.8.19@sha256:5a2c0db9f74812e67aa98f50f396e81edd23ef49cb6797b084027ba6124db707
+FROM --platform=linux/arm64/v8 ghcr.io/tdex-network/tdexd:v0.9.0@sha256:77729e6c0019752059cc5bf624675e261abd8b856e0a7e8f59889b7ec0a35eb3
 
 ## Dashaboard 
 ##

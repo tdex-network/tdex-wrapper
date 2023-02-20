@@ -1,6 +1,6 @@
 id: tdex 
 title: "TDEX"
-version: 0.8.17
+version: 0.9.0
 release-notes: "Initial Release for EmbassyOS"
 license: mit
 wrapper-repo: "https://github.com/islandbitcoin/tdex-wrapper"
