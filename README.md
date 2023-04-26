@@ -61,8 +61,8 @@ Now you are ready to build your **TDEX** service
 Clone the project locally. 
 
 ```
-git clone https://github.com/Start9Labs/TDEX-wrapper.git
-cd TDEX-wrapper
+git clone https://github.com/tdex-network/tdex-wrapper.git
+cd tdex-wrapper
 ```
 
 ## Building
@@ -89,3 +89,7 @@ embassy-cli --host https://embassy-q1w2e3r4.local package install tdexß.s9pk
 Go to your Embassy Services page, select **TDEX**, configure and start the service.
 
 **Done!** 
+
+## Contributors
+
+Special thanks to [IslandBitcoin](https://github.com/islandbitcoin) for his valuable contributions to this project.
