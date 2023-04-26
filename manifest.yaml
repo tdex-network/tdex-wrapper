@@ -1,9 +1,9 @@
-id: tdex 
+id: tdex
 title: "TDEX"
-version: 0.9.0
+version: 0.9.1
 release-notes: "Initial Release for EmbassyOS"
 license: mit
-wrapper-repo: "https://github.com/islandbitcoin/tdex-wrapper"
+wrapper-repo: "https://github.com/tdex-network/tdex-wrapper"
 upstream-repo: "https://github.com/tdex-network/tdex-daemon"
 support-site: "https://github.com/tdex-network/tdex-daemon/issues"
 marketing-site: "https://tdex.network"
@@ -11,7 +11,7 @@ build: ["make"]
 description:
   short: A Decentralised Vision to Leverage Atomic Swaps for Trustless Finance
   long: |
-    T(True)DEX is the first-of-its-kind, atomic-swap based, privacy-prioritised Decentralised Exchange (DEX) project built on the Liquid Network. 
+    T(True)DEX is the first-of-its-kind, atomic-swap based, privacy-prioritised Decentralised Exchange (DEX) project built on the Liquid Network.
 assets:
   license: LICENSE
   icon: icon.svg
@@ -29,7 +29,7 @@ health-checks:
     name: Web UI
     success-message: TDEX is ready to visit in a web browser
     type: script
-config: 
+config:
   get:
     type: script
   set:
@@ -56,15 +56,15 @@ backup:
   create:
     type: docker
     image: compat
-    system: true 
-    entrypoint: compat 
-    args: 
+    system: true
+    entrypoint: compat
+    args:
       - duplicity
       - create
       - /mnt/backup
       - /root/data
     mounts:
-      BACKUP: "/mnt/backup" 
+      BACKUP: "/mnt/backup"
       main: "/root/data"
   restore:
     type: docker
