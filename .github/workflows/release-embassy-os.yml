@@ -40,6 +40,10 @@ jobs:
       - name: Checkout the project locally
         uses: actions/checkout@v3
 
+      - name: Get version from manifest
+        run: echo "version=$(yq r manifest.yaml version)" >> $GITHUB_OUTPUT
+        id: version
+
       - name: Build the tdex s9pk
         run: make
 
@@ -47,3 +51,4 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: tdex.s9pk
+          tag_name: ${{ steps.version.outputs.value }}
